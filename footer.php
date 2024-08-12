@@ -2,7 +2,10 @@
 		
 			<div id="inner-footer" class="row no-margin-bot">
 
-				<?php if( have_rows('logos', 'option') ):
+				<?php 
+				
+				if(function_exists('get_field')):
+				if( have_rows('logos', 'option') ):
 
 					$count = count(get_field('logos', 'option'));
 					$cols = 12 / $count;
@@ -42,6 +45,7 @@
 				</div>
 
 				<?php endif;
+				endif;
 
 				// $fb = get_field("facebook", "options");
 				// $twitter = get_field("twitter", "options");

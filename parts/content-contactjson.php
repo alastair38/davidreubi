@@ -1,5 +1,6 @@
 <?php
 
+if(function_exists('get_field')):
 add_action('wp_footer', function() {
   $schema = array(
     // Tell search engines that this is structured data
@@ -24,5 +25,7 @@ add_action('wp_footer', function() {
 
 echo '<script type="application/ld+json">' . json_encode($schema) . '</script>';
 });
+
+endif;
 
 ?>

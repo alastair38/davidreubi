@@ -18,6 +18,8 @@ function site_scripts() {
   wp_enqueue_script( 'materialize-js', 'https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js', array( 'jquery' ), '', true );
 
     // Adding Cookie Consent scripts file in the footer
+    
+    if(function_exists('get_field')):
     $cookies_set = get_field('cookies_set', 'option');
 
     if($cookies_set) {
@@ -26,6 +28,8 @@ function site_scripts() {
 
       // wp_enqueue_style( 'cookie-style', 'https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css', array(), '', 'all' );
     }
+    
+    endif;
 
 
 
@@ -69,7 +73,3 @@ function site_scripts() {
     }
 }
 add_action('wp_enqueue_scripts', 'site_scripts', 999);
-
-/**
- * Register and enqueue a custom stylesheet in the WordPress admin.
- *
