@@ -58,23 +58,5 @@ endif;
 
 	  </div>
 
-		<?php
-
-	if (isset($access)){
-
-	?>
-		<div id="access-<?php echo $toolbar_pos;?>" class="grey lighten-4 col s12  hide-on-med-and-down" aria-label="Accessibility Settings">
-
-			<button id="themeContrast" class="btn-flat waves-effect waves-light" type="button" aria-pressed="false"><?php echo $theme_switcher;?></button>
-
-			<button class="btn-flat waves-effect waves-light" id="plustext"><?php echo $increase_text;?><span class="material-icons right">
-add_circle_outline
-</span></button>
-		<button class="btn-flat waves-effect waves-light" id="minustext"><?php echo $decrease_text;?><span class="material-icons right">
-remove_circle_outline
-</span></button>
-		</div>
-	<?php }
-	?>
-
+	
 	 </nav>
